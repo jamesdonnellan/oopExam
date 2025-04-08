@@ -1,4 +1,5 @@
 import ie.atu.week12.Patient;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions;
 
@@ -8,7 +9,7 @@ public class TestPatientFamilyName
         void createFamilyName()
         {
                 Patient p = new Patient("James");
-                assertEquals("James"p.getTitle());
+                assertEquals("James", p.getFamilyName());
         }
 
         @Test
