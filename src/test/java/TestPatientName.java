@@ -7,19 +7,19 @@ public class TestPatientName
     Patient p;
     @BeforeEach
     {
-        p = new Patient;
+         p = new Patient;
     }
         @Test
         void createPatientName()
         {
-            Patient p = new Patient("James");
+            Patient p = new Patient("Donnellan", "James");
             assertEquals("James", p.getName());
         }
 
         @Test
-        void invalidFamilyName()
+        void invalidPatientName()
         {
-            Exception ex = assertThrows(IllegalArgumentException.class, () -> new Patient("Bob"));
-            assertEquals("Error", ex.getMessage());
+            Exception ex = assertThrows(IllegalArgumentException.class, () -> new Patient("Murphy", "Jim"));
+            assertEquals("Error, incorrect Name", ex.getMessage());
         }
 }
